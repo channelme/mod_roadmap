@@ -3,6 +3,9 @@
 [
  {roadmap, ["roadmap"], controller_template,  [ {template, "roadmap/home.tpl"}, {id, roadmap_home} ]},
 
- {roadmap_released_m, ["roadmap-released", year, month], controller_template,  [ {template, "roadmap/released_by_date.tpl"}, {cat, article} ]},
- {roadmap_released_y, ["roadmap-released", year],  controller_template,  [ {template, "roadmap/released_by_date.tpl"}, {cat, article} ]}
+ {roadmap_media, ["roadmap-media", id], controller_page, [ {template, "roadmap/media.tpl"} ]},
+
+ {roadmap_item, ["roadmap", id, slug], controller_page, [ {template, "roadmap/item.tpl"}, {cat, roadmap_item} ]},
+ {roadmap_item, ["roadmap", id], controller_page, [ {template, "roadmap/item.tpl"}, {cat, roadmap_item} ]}
+
 ].
