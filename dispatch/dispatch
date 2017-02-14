@@ -1,0 +1,8 @@
+%% -*- mode: erlang -*-
+%% Dispatch rules for mod_roadmap.
+[
+ {roadmap, ["roadmap"], controller_template,  [ {template, "roadmap/home.tpl"}, {id, roadmap_home} ]},
+
+ {roadmap_released_m, ["roadmap-released", year, month], controller_template,  [ {template, "roadmap/released_by_date.tpl"}, {cat, article} ]},
+ {roadmap_released_y, ["roadmap-released", year],  controller_template,  [ {template, "roadmap/released_by_date.tpl"}, {cat, article} ]}
+].

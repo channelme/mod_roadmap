@@ -38,6 +38,7 @@
 
 init(Context) ->
     z_pivot_rsc:define_custom_pivot(?MODULE, [
+        {pivot_is_feedback_needed, "boolean not null default false"},
         {pivot_is_planned, "boolean not null default false"},
         {pivot_is_released, "boolean not null default false"},
         {pivot_planned_date_start, "timestamp with time zone"},
@@ -50,23 +51,30 @@ observe_custom_pivot(#custom_pivot{id=Id}, Context) ->
     case m_rsc:is_a(Id, roadmap_item, Context) of
         false -> none;
         true ->
-            {PlannedStart, PlannedEnd} = pivot_date_range(m_rsc:p(Id, planned_date_start, Context), 
+            ?DEBUG({pivot, Id}),
+            {PlannedStart, PlannedEnd} = pivot_date_range(m_rsc:p_no_acl(Id, planned_date_start, Context), 
                  m_rsc:p(Id, planned_date_end, Context)),
-            {?MODULE, [
-                {pivot_is_planned, z_convert:to_bool(m_rsc:p(Id, is_planned, Context))},
-                {pivot_is_released, z_convert:to_bool(m_rsc:p(Id, is_released, Context))},
-                {planned_date_start, PlannedStart},
-                {planned_date_end, PlannedEnd},
-                {release_date, pivot_date(m_rsc:p(Id, release_date, Context))}
-            ]}
+            ?DEBUG({?MODULE, [
+                {pivot_is_feedback_needed, z_convert:to_bool(m_rsc:p_no_acl(Id, is_feedback_needed, Context))},
+                {pivot_is_planned, z_convert:to_bool(m_rsc:p_no_acl(Id, is_planned, Context))},
+                {pivot_is_released, z_convert:to_bool(m_rsc:p_no_acl(Id, is_released, Context))},
+                {pivot_planned_date_start, PlannedStart},
+                {pivot_planned_date_end, PlannedEnd},
+                {pivot_release_date, pivot_date(m_rsc:p_no_acl(Id, release_date, Context))}
+            ]})
     end.
 
 manage_schema(_Version, Context) ->
     DataModel = #datamodel{
-        categories=[
-            {roadmap_item, text, [{title, <<"Roadmap Item">>}]}
-        ]
+         resources=[ 
+             {roadmap_home, text, [{title, <<"Roadmap">>}, {summary, <<"Our roadmap!">>}] } 
+         ],
+         categories=[
+             {roadmap_item, text, [{title, <<"Roadmap Item">>}]}
+         ]
     },
+
+    %% TODO, add roadmap_home publication
 
     z_datamodel:manage(?MODULE, DataModel, Context).
 
