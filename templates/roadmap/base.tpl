@@ -1,6 +1,7 @@
 {% extends "base.tpl" %}
 
-{% block banner %}
+
+{% block above %}
     <div class="page-title row-fluid">
         <div class="span12">
             {% block roadmap_title %}{% endblock %}
@@ -8,7 +9,7 @@
     </div>
 {% endblock %}
 
-{% block subnavbar %}
+{% block sidebar %}
     {% include "roadmap/_sidebar.tpl" %}
 {% endblock %}
 
