@@ -3,6 +3,5 @@
 
 {# TODO add some navigation #}
 
-{% include "_edit_button.tpl" %}
 
 {% endcache %}
