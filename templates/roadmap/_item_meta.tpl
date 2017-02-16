@@ -5,4 +5,8 @@
     {% elif m.rsc[id].is_planned %}
         <span class="label label-info">{_ planned from _} {{ m.rsc[id].planned_date_start|date:"j F Y"}}</span>
     {% endif %}
+    {% with m.comment.rsc[id] as feedback %}
+        <span class="label label-info">{_ Feedback _} <span class="badge">{{ feedback | length }}</span> </span>
+    {% endwith %}
 </small>
+{% include "_edit_button.tpl" %}

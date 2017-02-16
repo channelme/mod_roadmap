@@ -11,16 +11,13 @@
 
 {% block main %}
     {% inherit %}
-    {% wire id="zmodal" action={redirect dispatch="roadmap"} propagate %}
 	<div id="zmodal" class="modal" style="display: block; padding-right 14px; overflow-x: hidden; overflow-y: auto">
 		<div class="modal-dialog" style="display: block; margin-top: 10px;">
-			{% wire id="modal-content" action={script script="console.log('content-click')"} propagate %}
 			<div id="modal-content" class="modal-content">
 			    <div class="modal-header">
 				    <a class="close" href="{% url roadmap %}"><span>×</span></a>
                         {% include "roadmap/_item_meta.tpl" id=id %}
                        <h4 class="modal-title">{{ m.rsc[id].title }}</h1>
-					   {% include "_edit_button.tpl" %}
 			    </div>
 			    <div class="modal-body">
                     <article class="roadmap-item">
@@ -36,7 +33,7 @@
 	               {% include "_blocks.tpl" %}
 
                    {% block comments %}
-	                   <section id="comments">{% include "roadmap/_item_comments.tpl" id=id %}</section>
+	                   <section id="comments">{% include "roadmap/_item_feedback.tpl" id=id %}</section>
 	               {% endblock %}
 			    </div>
             </div>

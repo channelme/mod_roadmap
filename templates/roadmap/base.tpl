@@ -8,10 +8,6 @@
     </div>
 {% endblock %}
 
-{% block sidebar %}
-    {% include "roadmap/_sidebar.tpl" %}
-{% endblock %}
-
 {% block html_head_extra %}
     {% lib
         "css/z.modal.css"
