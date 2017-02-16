@@ -22,9 +22,9 @@
 
 -mod_title("Publish your roadmap").
 -mod_description("Manage and publish your roadmap on your site").
--mod_prio(500). %% Needs to be lower than mod_comment
+-mod_prio(400). %% Needs to be lower than mod_comment
 -mod_schema(1).
--mod_depends([comment]).
+-mod_depends([mod_comment]).
 
 -include_lib("zotonic.hrl").
 
