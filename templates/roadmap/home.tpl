@@ -1,12 +1,11 @@
 {% extends "roadmap/base.tpl" %}
 
 {% block roadmap_title %}
-    {% include "roadmap/_item_meta.tpl" id=id %}
     <h1>{{ m.rsc[id].title }}</h1>
 {% endblock %}
 
 {% block main %}
-    {% cache 600 cat='roadmap_item' %}
+    {% cache 600 if_anonymous cat='roadmap_item' %}
     <div class="row">
 		<div class="col-md-4">
 			{_ New _}
@@ -21,6 +20,8 @@
 			            {% include "roadmap/_roadmap_item_summary.tpl" id=id %}
 					</div>
 			</div>
+                        {% empty %}
+                            <p>{_ There are no released new roadmap items _}</p>
 			{% endfor %}
 			{% endwith %}
 		</div>
@@ -36,6 +37,8 @@
 			           {% include "roadmap/_roadmap_item_summary.tpl" id=id %}
 					</div>
 				</div>
+                        {% empty %}
+                            <p>{_ There are no released planned roadmap items _}</p>
 			{% endfor %}
 			{% endwith %}
 		</div>
@@ -50,6 +53,8 @@
 			            {% include "roadmap/_roadmap_item_summary.tpl" id=id %}
 				    </div>
 				</div>
+                        {% empty %}
+                            <p>{_ There are no released roadmap items _}</p>
 			{% endfor %}
 			{% endwith %}
 		</div>
