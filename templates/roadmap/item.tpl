@@ -5,7 +5,7 @@
 {% block page_class %}modal-open{% endblock %}
 
 {% block roadmap_title %}
-    {% include "roadmap/_item_meta.tpl" id=`roadmap_home` %}
+    {# include "roadmap/_item_meta.tpl" id=`roadmap_home` #}
     <h1>{{ m.rsc[`roadmap_home`].title }}</h1>
 {% endblock %}
 

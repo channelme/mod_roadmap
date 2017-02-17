@@ -1,4 +1,4 @@
-<small>{{ m.rsc[id].publication_start|date:"j F Y"}}
+<div>{{ m.rsc[id].publication_start|date:"j F Y"}}
     {% if m.rsc[id].author.id %}{_ written by _} <a href="{% url blog_author id=m.rsc[id].author.id %}">{{ m.rsc[id].author.title }}</a>{% endif %}
     {% if m.rsc[id].is_released %}
         <span class="label label-success">{_ released at _} {{ m.rsc[id].release_date|date:"j F Y"}}</span>
@@ -8,5 +8,5 @@
     {% with m.comment.rsc[id] as feedback %}
         <span class="label label-info">{_ Feedback _} <span class="badge">{{ feedback | length }}</span> </span>
     {% endwith %}
-</small>
+</div>
 {% include "_edit_button.tpl" %}

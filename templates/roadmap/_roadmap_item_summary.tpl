@@ -7,17 +7,21 @@
     summary,
     excerpt
 %}
-<h3><a href="{% url roadmap_item id=id slug=m.rsc[id].slug %}">{{ m.rsc[id].title }}</a></h3>
-{% include "roadmap/_item_meta.tpl" %}
-<p>
-    {{ summary|default:excerpt }}
-</p>
-{% if image_id %}
-    <a href="{% url roadmap_item id=id slug=m.rsc[id].slug %}">
-        {% image m.rsc[id].media[1] mediaclass="roadmap_summary" %}
-   </a>
-{% endif %}
-<p>
-    <a class="btn btn-xs btn-default pull-right" href="{% url roadmap_item id=id slug=m.rsc[id].slug %}">{_ Read more _}</a>
-</p>
+<a href="{% url roadmap_item id=id slug=m.rsc[id].slug %}">
+	<div class="panel-body">
+		<h3>
+			{{ m.rsc[id].title }}
+		</h3>
+		<p>
+			{{ summary|default:excerpt }}
+		</p>
+		
+		{% if image_id %}
+			{% image m.rsc[id].media[1] mediaclass="roadmap_summary" %}
+		{% endif %}
+		<hr>
+		{% include "roadmap/_item_meta.tpl" %}
+		
+	</div>
+</a>
 {% endwith %}
