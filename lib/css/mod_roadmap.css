@@ -1,0 +1,49 @@
+.wrapper-roadmap{
+	background: #d8dbe2;
+	padding: 50px 0px;
+}
+
+.panel.panel-default{
+	background: white;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 1px;
+}
+
+.list {
+	margin: 0 5px;
+	max-width: 300px;
+}
+
+.list .header {
+    color: #4d4d4d;
+    font: 14px "Helvetica Neue",Arial,Helvetica,sans-serif;
+    line-height: 18px
+    font-size: 18px;
+
+	font-weight: bold;
+	padding: 8px 10px 8px 0px;
+}
+
+.list p, .list a{
+    color: #4d4d4d;
+    font: 14px "Helvetica Neue",Arial,Helvetica,sans-serif;
+    line-height: 18px
+}
+
+
+.list small {
+    color: #4d4d4d;
+    font: 12px "Helvetica Neue",Arial,Helvetica,sans-serif;
+    line-height: 18px
+}
+
+.list a:hover {
+    text-decoration: none;
+}
+
+.list a:hover .panel-body{
+	background: #EDEFF0;
+}
+
+.panel {
+    margin-bottom: 6px;
+}
