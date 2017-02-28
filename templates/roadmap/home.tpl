@@ -34,7 +34,7 @@
 					{% include "roadmap/_roadmap_item_summary.tpl" id=id %}
 				</div>
                         {% empty %}
-                            <p>{_ There are no released planned roadmap items _}</p>
+                            <p>{_ There are no planned roadmap items _}</p>
 			{% endfor %}
 			{% endwith %}
 		</div>

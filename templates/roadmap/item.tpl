@@ -4,10 +4,7 @@
 {# Fake an open modal #}
 {% block page_class %}modal-open{% endblock %}
 
-{% block roadmap_title %}
-    {# include "roadmap/_item_meta.tpl" id=`roadmap_home` #}
-    <h1>{{ m.rsc[`roadmap_home`].title }}</h1>
-{% endblock %}
+
 
 {% block main %}
     {% inherit %}
@@ -16,8 +13,8 @@
 			<div id="modal-content" class="modal-content">
 			    <div class="modal-header">
 				    <a class="close" href="{% url roadmap %}"><span>×</span></a>
-                        {% include "roadmap/_item_meta.tpl" id=id %}
-                       <h4 class="modal-title">{{ m.rsc[id].title }}</h1>
+                       <h4 class="modal-title">{{ m.rsc[id].title }}</h4>
+                        <small>{% include "roadmap/_item_meta.tpl" id=id %}</small>
 			    </div>
 			    <div class="modal-body">
                     <article class="roadmap-item">
