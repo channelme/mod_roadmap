@@ -90,3 +90,13 @@
 	clear:both;
 	padding-top: 25px;
 }
+
+.label{
+	font-weight: 400;
+}
+
+img.roadmap_article{
+	display: block;
+    max-width: 100%;
+    height: auto;
+}

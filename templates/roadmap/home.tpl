@@ -8,7 +8,7 @@
 <div class="container">
     <div class="row">
 		<div class="list col-sm-4">
-			<div class="list header"><h2>{_ New _}</h2></div>
+			<div class="list header"><h2>{_ New Ideas _}</h2></div>
 			{% with m.search.paged[{query cat=`roadmap_item` custompivot="mod_roadmap" 
 			     filter=["pivot1.is_feedback_needed", `=`, 1] 
 				 filter=["pivot1.is_planned", `=`, 0] 
