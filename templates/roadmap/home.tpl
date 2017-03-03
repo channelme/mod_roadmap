@@ -1,6 +1,6 @@
 {% extends "roadmap/base.tpl" %}
 
-
+{% block title %}{{ m.rsc[id].title }}{% endblock %}
 
 {% block main %}
     {% cache 600 if_anonymous cat='roadmap_item' %}
@@ -8,7 +8,7 @@
 <div class="container">
     <div class="row">
 		<div class="list col-sm-4">
-			<div class="list header"><h2>{_ New Ideas _}</h2></div>
+			<div class="list header"><h2>{_ Future Items _}</h2></div>
 			{% with m.search.paged[{query cat=`roadmap_item` custompivot="mod_roadmap" 
 			     filter=["pivot1.is_feedback_needed", `=`, 1] 
 				 filter=["pivot1.is_planned", `=`, 0] 

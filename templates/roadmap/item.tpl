@@ -4,7 +4,7 @@
 {# Fake an open modal #}
 {% block page_class %}modal-open{% endblock %}
 
-
+{% block title %}{{ m.rsc[id].title }}{% endblock %}
 
 {% block main %}
     {% inherit %}
