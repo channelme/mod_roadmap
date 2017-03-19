@@ -30,7 +30,7 @@
 	               {% include "_blocks.tpl" %}
 
                    {% block comments %}
-	                   <section id="comments">{% include "roadmap/_item_feedback.tpl" id=id %}</section>
+	                   <section id="comments"><div class="row"><div class="col-md-12">{% include "roadmap/_item_feedback.tpl" id=id %}</div></div></section>
 	               {% endblock %}
 			    </div>
             </div>

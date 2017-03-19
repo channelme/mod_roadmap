@@ -17,7 +17,7 @@
 		</p>
 		
 		{% if image_id %}
-			{% image m.rsc[id].media[1] mediaclass="roadmap_summary" %}
+			{% image m.rsc[id].media[1] mediaclass="roadmap_summary" class="img-responsive" %}
 		{% endif %}
 		<hr>
 		{% include "roadmap/_item_meta.tpl" %}

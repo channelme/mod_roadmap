@@ -7,5 +7,5 @@
 	{% include "_blocks.tpl" %}
 
     {% block comments %}
-	    <section id="comments">{% include "roadmap/_item_comments.tpl" id=id %}</section>
+	    <section id="comments" class="row">{% include "roadmap/_item_comments.tpl" id=id %}</section>
 	{% endblock %}
