@@ -3,7 +3,7 @@
 {% block title %}{{ m.rsc[id].title }}{% endblock %}
 
 {% block main %}
-    {% include "_home.tpl" %}
+    {% include "roadmap/_home.tpl" %}
 {% endblock %}
 
 {% block subnavbar %}
