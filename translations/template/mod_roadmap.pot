@@ -1,0 +1,109 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+# NB: Consider using poEdit <http://poedit.sourceforge.net>
+#
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ./user/modules/mod_roadmap/templates/roadmap/_item_meta.tpl:11 
+msgid ""
+"Feedback"
+msgstr ""
+
+#: ./user/modules/mod_roadmap/templates/_admin_edit_sidebar.roadmap_item.tpl:20 
+msgid ""
+"Feedback Needed"
+msgstr ""
+
+#: ./user/modules/mod_roadmap/templates/roadmap/_home.tpl:6 
+msgid ""
+"Future Items"
+msgstr ""
+
+#: ./user/modules/mod_roadmap/templates/_admin_edit_sidebar.roadmap_item.tpl:6 
+msgid ""
+"Help about roadmap items."
+msgstr ""
+
+#: ./user/modules/mod_roadmap/templates/_admin_edit_sidebar.roadmap_item.tpl:24 
+msgid ""
+"Is Planned"
+msgstr ""
+
+#: ./user/modules/mod_roadmap/templates/_admin_edit_sidebar.roadmap_item.tpl:28 
+msgid ""
+"Is Released"
+msgstr ""
+
+#: ./user/modules/mod_roadmap/templates/_admin_edit_sidebar.roadmap_item.tpl:6 
+msgid ""
+"Need more help?"
+msgstr ""
+
+#: ./user/modules/mod_roadmap/templates/roadmap/_home.tpl:22 
+msgid ""
+"Planned Items"
+msgstr ""
+
+#: ./user/modules/mod_roadmap/templates/_admin_edit_sidebar.roadmap_item.tpl:39 
+msgid ""
+"Planned from"
+msgstr ""
+
+#: ./user/modules/mod_roadmap/templates/_admin_edit_sidebar.roadmap_item.tpl:47 
+msgid ""
+"Planned till"
+msgstr ""
+
+#: ./user/modules/mod_roadmap/templates/_admin_edit_sidebar.roadmap_item.tpl:64 
+msgid ""
+"Release Date"
+msgstr ""
+
+#: ./user/modules/mod_roadmap/templates/roadmap/_home.tpl:37 
+msgid ""
+"Released Items"
+msgstr ""
+
+#: ./user/modules/mod_roadmap/templates/_admin_edit_sidebar.roadmap_item.tpl:4 
+msgid ""
+"Roadmap Item"
+msgstr ""
+
+#: ./user/modules/mod_roadmap/templates/_admin_edit_sidebar.roadmap_item.tpl:6 
+msgid ""
+"Roadmap items can be planned, released or marked to get feedback."
+msgstr ""
+
+#: ./user/modules/mod_roadmap/templates/roadmap/_home.tpl:32 
+msgid ""
+"There are no planned roadmap items"
+msgstr ""
+
+#: ./user/modules/mod_roadmap/templates/roadmap/_home.tpl:17 
+msgid ""
+"There are no released new roadmap items"
+msgstr ""
+
+#: ./user/modules/mod_roadmap/templates/roadmap/_home.tpl:46 
+msgid ""
+"There are no released roadmap items"
+msgstr ""
+
+#: ./user/modules/mod_roadmap/templates/roadmap/_item_meta.tpl:4 
+msgid ""
+"written by"
+msgstr ""
