@@ -1,5 +1,5 @@
 {% cache 600 if_anonymous cat='roadmap_item' %}
-<div class="wrapper-roadmap">
+<div class="roadmap_wrapper">
 <div class="container">
     <div class="row">
 		<div class="list col-sm-4">
@@ -49,5 +49,5 @@
 		</div>
     </div>
     </div>
-    </div>	
+</div>	
 {% endcache %}
