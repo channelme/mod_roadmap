@@ -1,7 +1,7 @@
 <div>
-	<!--<small>{{ m.rsc[id].publication_start|date:"j F Y"}}</small> -->
-
-    {% if m.rsc[id].author.id %}{_ written by _} <a href="{% url blog_author id=m.rsc[id].author.id %}">{{ m.rsc[id].author.title }}</a>{% endif %}
+    {% if m.rsc[id].author.id %}
+        {_ written by _} <a href="{% url blog_author id=m.rsc[id].author.id %}">{{ m.rsc[id].author.title | default:_"Anonymous" }}</a>
+    {% endif %}
     {% if m.rsc[id].is_released %}
         <span class="label label-success">{{ m.rsc[id].release_date|date:"F Y"}}</span>
     {% elif m.rsc[id].is_planned %}
