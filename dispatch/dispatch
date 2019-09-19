@@ -1,11 +1,27 @@
 %% -*- mode: erlang -*-
 %% Dispatch rules for mod_roadmap.
 [
- {roadmap, ["roadmap"], controller_template,  [ {template, "roadmap/home.tpl"}, {id, roadmap_home} ]},
+ {roadmap, ["roadmap"], controller_template,
+  [ {ssl, true},
+    {template, "roadmap/home.tpl"},
+    {id, roadmap_home}
+  ]},
 
- {roadmap_media, ["roadmap-media", id], controller_page, [ {template, "roadmap/media.tpl"} ]},
+ {roadmap_media, ["roadmap-media", id], controller_page,
+  [ {ssl, true},
+    {template, "roadmap/media.tpl"}
+  ]},
 
- {roadmap_item, ["roadmap", id, slug], controller_page, [ {template, "roadmap/item.tpl"}, {cat, roadmap_item} ]},
- {roadmap_item, ["roadmap", id], controller_page, [ {template, "roadmap/item.tpl"}, {cat, roadmap_item} ]}
+ {roadmap_item, ["roadmap", id, slug], controller_page,
+  [ {ssl, true},
+    {template, "roadmap/item.tpl"},
+    {cat, roadmap_item}
+  ]},
+
+ {roadmap_item, ["roadmap", id], controller_page,
+  [ {ssl, true},
+    {template, "roadmap/item.tpl"},
+    {cat, roadmap_item}
+  ]}
 
 ].
