@@ -1,0 +1,53 @@
+/**
+ * css for the thumbviewer
+ */
+
+span.thumbviewer.overlay {
+    color: white;
+    cursor: pointer;
+    z-index: 8000;
+    font-size: x-large;
+
+}
+span.thumbviewer.overlay:before {
+    content: "⊗"
+}
+
+img.thumbviewer.bigimg {
+    z-index: 9000;
+    cursor: pointer;
+}
+
+span.thumbviewer.magnifier:before {
+    content: "🡘";
+}   
+span.thumbviewer.magnifier {
+    background: #fff;
+    opacity: 0.8;
+
+    height: 1.5em;
+    line-height: 1.5em;
+    width: 1.5em;
+
+    transform: rotate(-45deg);
+
+    text-align: center;
+    vertical-align: middle;
+
+    display: inline-block;
+    border-radius: 50%
+}
+
+span.thumbviewer.magnifier:hover {
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+div.thumbviewer.loader {
+    background: #fff url(/lib/images/spinner.gif) 50% 50% no-repeat;
+    opacity: 0.5;
+}
+
+div.thumbviewer.loader:hover {
+    cursor: wait;
+}

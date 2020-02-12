@@ -4,10 +4,13 @@
 {# Fake an open modal #}
 {% block page_class %}modal-open{% endblock %}
 
+{% block head_extra %}
+{% lib "css/z.thumbviewer.css" %}
+{% endblock %}
+
 {% block title %}{{ m.rsc[id].title }}{% endblock %}
 
 {% block main %}
-    {% lib "js/z.imageviewer.js" %}
     {% inherit %}
 	<div id="zmodal" class="modal" style="display: block; padding-right 14px; overflow-x: hidden; overflow-y: auto">
 		<div class="modal-dialog" style="display: block; margin-top: 10px;">
@@ -39,4 +42,8 @@
     </div>
 
 	<div id="backdrop" class="modal-backdrop"></div>
+{% endblock %}
+
+{% block js_extra %}
+    {% lib "js/modules/z.thumbviewer.js" %}
 {% endblock %}
