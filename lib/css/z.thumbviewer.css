@@ -6,21 +6,16 @@ span.thumbviewer.overlay {
     color: white;
     cursor: pointer;
     z-index: 8000;
-    font-size: x-large;
-
+    font-size: xx-large;
 }
+
 span.thumbviewer.overlay:before {
     content: "⊗"
 }
-
-img.thumbviewer.bigimg {
-    z-index: 9000;
-    cursor: pointer;
-}
-
 span.thumbviewer.magnifier:before {
     content: "🡘";
 }   
+
 span.thumbviewer.magnifier {
     background: #fff;
     opacity: 0.8;
@@ -51,3 +46,13 @@ div.thumbviewer.loader {
 div.thumbviewer.loader:hover {
     cursor: wait;
 }
+
+img.do_thumbviewer {
+    cursor: zoom-in;
+}
+
+img.thumbviewer.bigimg {
+    z-index: 9000;
+    cursor: zoom-out;
+}
+
