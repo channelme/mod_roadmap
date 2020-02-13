@@ -7,35 +7,13 @@ span.thumbviewer.overlay {
     cursor: pointer;
     z-index: 8000;
     font-size: xx-large;
+    text-align: right;
+    padding-top: 10px;
+    padding-right: 10px;
 }
 
 span.thumbviewer.overlay:before {
     content: "⊗"
-}
-span.thumbviewer.magnifier:before {
-    content: "🡘";
-}   
-
-span.thumbviewer.magnifier {
-    background: #fff;
-    opacity: 0.8;
-
-    height: 1.5em;
-    line-height: 1.5em;
-    width: 1.5em;
-
-    transform: rotate(-45deg);
-
-    text-align: center;
-    vertical-align: middle;
-
-    display: inline-block;
-    border-radius: 50%
-}
-
-span.thumbviewer.magnifier:hover {
-    opacity: 0.9;
-    cursor: pointer;
 }
 
 div.thumbviewer.loader {
@@ -45,6 +23,12 @@ div.thumbviewer.loader {
 
 div.thumbviewer.loader:hover {
     cursor: wait;
+}
+
+img.do_thumbviewer:before {
+    content: "<>";
+    font-size: xx-large;
+    text-align: right;
 }
 
 img.do_thumbviewer {
