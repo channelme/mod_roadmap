@@ -25,12 +25,6 @@ div.thumbviewer.loader:hover {
     cursor: wait;
 }
 
-img.do_thumbviewer:before {
-    content: "<>";
-    font-size: xx-large;
-    text-align: right;
-}
-
 img.do_thumbviewer {
     cursor: zoom-in;
 }
