@@ -5,13 +5,12 @@
 		</section>
 	{% else %}
 		<figure class="image-wrapper block-level-image">
-			{% media m.rsc[id].medium mediaclass="roadmap_article" alt=m.rsc[id].title %}
+                    {% media m.rsc[id].medium width=size.width height=size.height mediaclass=("roadmap_thumb_" ++ sizename) alt=m.rsc[id].title class=("do_thumbviewer " ++ align) link=link %}
 			{% with id|summary as summary %}{% if summary %}<small class="muted image-caption">{{ summary }}</small>{% endif %}{% endwith %}
 		</figure>
+
 	{% endifequal %}
+
 {% else %}
-    <figure class="image-wrapper block-level-image">
-    	{% media m.rsc[id].medium mediaclass="roadmap_article" alt=m.rsc[id].title %}
-    	{% with id|summary as summary %}{% if summary %}<small class="muted image-caption">{{ summary }}</small>{% endif %}{% endwith %}
-    </figure>
+        {% media m.rsc[id].medium mediaclass=("roadmap_thumb_" ++ sizename) width=size.width height=size.height alt=m.rsc[id].title class=("do_thumbviewer " ++ align) link=link %}
 {% endifequal %}

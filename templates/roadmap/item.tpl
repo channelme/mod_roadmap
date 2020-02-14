@@ -4,6 +4,10 @@
 {# Fake an open modal #}
 {% block page_class %}modal-open{% endblock %}
 
+{% block head_extra %}
+{% lib "css/z.thumbviewer.css" %}
+{% endblock %}
+
 {% block title %}{{ m.rsc[id].title }}{% endblock %}
 
 {% block main %}
@@ -38,4 +42,8 @@
     </div>
 
 	<div id="backdrop" class="modal-backdrop"></div>
+{% endblock %}
+
+{% block js_extra %}
+    {% lib "js/modules/z.thumbviewer.js" %}
 {% endblock %}
