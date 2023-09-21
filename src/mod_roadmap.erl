@@ -26,7 +26,7 @@
 -mod_schema(1).
 -mod_depends([mod_comment]).
 
--include_lib("zotonic.hrl").
+-include_lib("zotonic_core/include/zotonic.hrl").
 
 -export([
     init/1,
